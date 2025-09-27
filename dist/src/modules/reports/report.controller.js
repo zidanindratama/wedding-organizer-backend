@@ -1,4 +1,4 @@
-import { prisma } from "@/db/prisma.js";
+import { prisma } from "../../../src/db/prisma";
 export async function ordersSummary(_req, res) {
     const [total, approved, pending, rejected] = await Promise.all([
         prisma.order.count(),

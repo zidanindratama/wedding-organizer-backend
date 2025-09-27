@@ -3,13 +3,13 @@ import {
   createContact,
   listContacts,
   updateContactStatus,
-} from "./contact.controller.js";
-import { validateBody } from "@/middleware/validate.js";
+} from "./contact.controller";
 import {
   createContactSchema,
   updateContactStatusSchema,
-} from "./contact.schema.js";
-import { requireAdmin, requireAuth } from "@/middleware/auth.js";
+} from "./contact.schema";
+import { requireAdmin, requireAuth } from "src/middleware/auth";
+import { validateBody } from "src/middleware/validate";
 
 const router = Router();
 

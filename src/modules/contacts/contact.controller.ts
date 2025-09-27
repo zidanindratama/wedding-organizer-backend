@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { prisma } from "@/db/prisma.js";
 import { StatusCodes } from "http-status-codes";
+import { prisma } from "src/db/prisma";
 
 type SortKey =
   | "newest"

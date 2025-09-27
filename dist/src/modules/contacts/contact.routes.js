@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { createContact, listContacts, updateContactStatus, } from "./contact.controller.js";
-import { validateBody } from "@/middleware/validate.js";
-import { createContactSchema, updateContactStatusSchema, } from "./contact.schema.js";
-import { requireAdmin, requireAuth } from "@/middleware/auth.js";
+import { createContact, listContacts, updateContactStatus, } from "./contact.controller";
+import { createContactSchema, updateContactStatusSchema, } from "./contact.schema";
+import { requireAdmin, requireAuth } from "../../../src/middleware/auth";
+import { validateBody } from "../../../src/middleware/validate";
 const router = Router();
 router.post("/", validateBody(createContactSchema), createContact);
 router.get("/", requireAuth, requireAdmin, listContacts);

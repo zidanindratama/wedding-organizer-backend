@@ -1,5 +1,5 @@
-import { verifyToken } from "@/utils/jwt.js";
 import { StatusCodes } from "http-status-codes";
+import { verifyToken } from "../../src/utils/jwt";
 export function requireAuth(req, res, next) {
     const auth = req.headers.authorization;
     if (!auth?.startsWith("Bearer ")) {

@@ -6,10 +6,10 @@ import {
   listAllPackagesAdmin,
   listPackages,
   updatePackage,
-} from "./package.controller.js";
-import { validateBody } from "@/middleware/validate.js";
-import { createPackageSchema, updatePackageSchema } from "./package.schema.js";
-import { requireAdmin, requireAuth } from "@/middleware/auth.js";
+} from "./package.controller";
+import { requireAdmin, requireAuth } from "src/middleware/auth";
+import { createPackageSchema, updatePackageSchema } from "./package.schema";
+import { validateBody } from "src/middleware/validate";
 
 const router = Router();
 

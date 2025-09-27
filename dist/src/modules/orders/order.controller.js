@@ -1,6 +1,6 @@
-import { prisma } from "@/db/prisma.js";
 import { StatusCodes } from "http-status-codes";
 import crypto from "crypto";
+import { prisma } from "../../../src/db/prisma";
 function buildOrderBy(sort) {
     if (sort === "oldest")
         return { createdAt: "asc" };

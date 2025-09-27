@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
-import { prisma } from "@/db/prisma.js";
-import { comparePassword } from "@/utils/password.js";
-import { signToken } from "@/utils/jwt.js";
 import { StatusCodes } from "http-status-codes";
+import { comparePassword } from "src/utils/password";
+import { signToken } from "src/utils/jwt";
+import { prisma } from "src/db/prisma";
 
 export async function login(req: Request, res: Response) {
   const { email, password } = req.body as { email: string; password: string };

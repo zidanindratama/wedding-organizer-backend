@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import { env } from "@/config/env.js";
+import { env } from "../../src/config/env";
 export function signToken(payload, opts = {}) {
     const options = { expiresIn: env.jwtExpiresIn, ...opts };
     return jwt.sign(payload, env.jwtSecret, options);

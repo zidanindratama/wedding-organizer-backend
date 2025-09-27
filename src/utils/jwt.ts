@@ -1,5 +1,5 @@
 import jwt, { type JwtPayload, type SignOptions } from "jsonwebtoken";
-import { env } from "@/config/env.js";
+import { env } from "src/config/env";
 
 export interface AuthPayload extends JwtPayload {
   userId: string;
