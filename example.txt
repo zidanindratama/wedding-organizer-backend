@@ -1,0 +1,10 @@
+PORT="3001"
+
+JWT_SECRET="super_super_secret_change_me"
+JWT_EXPIRES_IN="1d"
+
+DATABASE_URL="mongodb+srv://zidanindratama:razitamarsya@cluster0.zxnvnzi.mongodb.net/wo_jwp?retryWrites=true&w=majority&appName=Cluster0"
+
+SEED_ADMIN_NAME="Administrator"
+SEED_ADMIN_EMAIL="admin@jewepe.test"
+SEED_ADMIN_PASSWORD="Admin123!"
