@@ -1,0 +1,26 @@
+import { Router } from "express";
+import {
+  createContact,
+  listContacts,
+  updateContactStatus,
+} from "./contact.controller.js";
+import { validateBody } from "@/middleware/validate.js";
+import {
+  createContactSchema,
+  updateContactStatusSchema,
+} from "./contact.schema.js";
+import { requireAdmin, requireAuth } from "@/middleware/auth.js";
+
+const router = Router();
+
+router.post("/", validateBody(createContactSchema), createContact);
+router.get("/", requireAuth, requireAdmin, listContacts);
+router.patch(
+  "/:id/status",
+  requireAuth,
+  requireAdmin,
+  validateBody(updateContactStatusSchema),
+  updateContactStatus
+);
+
+export default router;
