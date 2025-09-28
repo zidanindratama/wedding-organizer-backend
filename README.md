@@ -342,5 +342,3 @@ curl -L -H "Authorization: Bearer $TOKEN" \
 MIT © 2025 JeWePe Team
 
 ---
-
-👉 Dengan Atlas, kamu tinggal pakai `DATABASE_URL` dari dashboard Atlas. Nggak perlu setup replica set manual.
