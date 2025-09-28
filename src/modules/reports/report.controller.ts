@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import { prisma } from "src/db/prisma";
+import { prisma } from "../../db/prisma.js";
 
 export async function ordersSummary(_req: Request, res: Response) {
   const [total, approved, pending, rejected] = await Promise.all([

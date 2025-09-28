@@ -9,7 +9,7 @@ import {
   ordersTrend,
   statusDistribution,
 } from "./report.controller.js";
-import { requireAdmin, requireAuth } from "../../middleware/auth";
+import { requireAdmin, requireAuth } from "../../middleware/auth.js";
 
 const router = Router();
 

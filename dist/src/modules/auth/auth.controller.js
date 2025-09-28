@@ -1,7 +1,7 @@
 import { StatusCodes } from "http-status-codes";
-import { comparePassword } from "../../../src/utils/password";
-import { signToken } from "../../../src/utils/jwt";
-import { prisma } from "../../../src/db/prisma";
+import { prisma } from "../../db/prisma.js";
+import { signToken } from "../../utils/jwt.js";
+import { comparePassword } from "../../utils/password.js";
 export async function login(req, res) {
     const { email, password } = req.body;
     const user = await prisma.user.findUnique({ where: { email } });

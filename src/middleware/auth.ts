@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import { StatusCodes } from "http-status-codes";
-import { verifyToken } from "src/utils/jwt";
+import { verifyToken } from "./../utils/jwt.js";
 
 export type AuthUser = {
   userId: string;

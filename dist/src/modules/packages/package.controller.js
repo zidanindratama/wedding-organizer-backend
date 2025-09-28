@@ -1,5 +1,5 @@
 import { StatusCodes } from "http-status-codes";
-import { prisma } from "../../../src/db/prisma";
+import { prisma } from "../../db/prisma.js";
 function buildOrderBy(sort) {
     if (sort === "az")
         return { name: "asc" };

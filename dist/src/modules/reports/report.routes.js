@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { ordersSummary, ordersCsv, revenueSummary, topPackages, upcomingEvents, pendingAging, ordersTrend, statusDistribution, } from "./report.controller.js";
-import { requireAdmin, requireAuth } from "../../middleware/auth";
+import { requireAdmin, requireAuth } from "../../middleware/auth.js";
 const router = Router();
 router.get("/orders/summary", requireAuth, requireAdmin, ordersSummary);
 router.get("/orders/status-distribution", requireAuth, requireAdmin, statusDistribution);

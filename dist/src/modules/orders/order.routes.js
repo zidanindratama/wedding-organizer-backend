@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { createOrderSchema, updateStatusSchema } from "./order.schema";
-import { checkOrder, createOrder, listOrders, updateOrderStatus, } from "./order.controller";
-import { requireAdmin, requireAuth } from "../../../src/middleware/auth";
-import { validateBody } from "../../../src/middleware/validate";
+import { validateBody } from "../../middleware/validate.js";
+import { createOrderSchema, updateStatusSchema } from "./order.schema.js";
+import { checkOrder, createOrder, listOrders, updateOrderStatus, } from "./order.controller.js";
+import { requireAdmin, requireAuth } from "../../middleware/auth.js";
 const router = Router();
 router.post("/", validateBody(createOrderSchema), createOrder);
 router.get("/check", checkOrder);
